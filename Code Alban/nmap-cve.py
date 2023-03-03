@@ -1,4 +1,4 @@
- Importer nmap et Tkinter
+# Importer nmap et Tkinter
 import nmap
 from tkinter import *
 from tkinter import ttk
@@ -24,9 +24,9 @@ def scan_nmap():
 
   # Afficher uniquement les ports ouverts avec leur nom et leur version dans le tableau Scan NMAP
   for port in scanner[ip_address].all_tcp():
-    scan_table.insert('', 'end', values=(port, scanner[ip_address].tcp(port)['name'], scanner[ip_address].tcp(port)>
+    scan_table.insert('', 'end', values=(port, scanner[ip_address].tcp(port)['name'], scanner[ip_address].tcp(port)>))
   for port in scanner[ip_address].all_udp():
-    scan_table.insert('', 'end', values=(port, scanner[ip_address].udp(port)['name'], scanner[ip_address].udp(port)>
+    scan_table.insert('', 'end', values=(port, scanner[ip_address].udp(port)['name'], scanner[ip_address].udp(port)>))
 
   # TODO: Récupérer les informations CVE pour chaque service en cours d'exécution sur l'hôte cible et les afficher >
 
