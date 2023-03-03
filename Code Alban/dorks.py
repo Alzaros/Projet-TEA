@@ -37,7 +37,7 @@ elif choice == "4":
     google_dork(query)
 elif choice == "5":
     keyword = input("Entrez le nom de la personne : ")
-    query = f"\"{keyword}\" site:linkedin.com OR site:github.com OR site:facebook.com OR site:instagram.com OR site>
+    query = f"\"{keyword}\" site:linkedin.com OR site:github.com OR site:facebook.com OR site:instagram.com OR site>"
     google_dork(query)
 elif choice == "6":
     keyword = input("Entrez un mot clé: ")
