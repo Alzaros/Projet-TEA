@@ -1,54 +1,100 @@
-# Importer nmap et Tkinter
-import nmap
-from tkinter import *
+import tkinter as tk
 from tkinter import ttk
+import nmap
+import sys
+import os
 
+# Fonction pour scanner les ports et récupérer les CVE associées
+def scan_ports(ip_address):
+    nm = nmap.PortScanner()
+    nm.scan(ip_address, arguments='-sS -sV -O') # -sS pour le scan SYN, -sV pour le scan de version, -O pour le sca>
+    port_cve_list = []
+    for port in nm[ip_address]['tcp'].keys():
+        port_dict = {}
+        port_dict['port'] = port
+        cve_list = []
+        try:
+            cpe = nm[ip_address]['tcp'][port]['cpe']
+            cve_list = nm.get_nmap_last_output().split(cpe + ':')[1].split('\n')
+        except:
+            pass
+        port_dict['cve_list'] = cve_list
+        port_cve_list.append(port_dict)
+    return port_cve_list
 
-# Créer la fenêtre principale
-root = Tk()
-root.title("Découverte de CVE")
+# Fonction pour afficher les résultats dans une fenêtre Tkinter
+def display_results():
+    ip_address = ip_entry.get()
+    if not is_valid_ip_address(ip_address):
+        tk.messagebox.showerror(title="Erreur", message="Adresse IP invalide")
+        return
+    port_cve_list = scan_ports(ip_address)
+    table.delete(*table.get_children())
+    for port_cve in port_cve_list:
+        port = port_cve['port']
+        cve_list = port_cve['cve_list']
+        if cve_list:
+            for cve in cve_list:
+                if cve:
+                    table.insert('', 'end', values=(ip_address, port, cve))
+                else:
+                    table.insert('', 'end', values=(ip_address, port, 'Aucune CVE trouvée'))
+        else:
+            table.insert('', 'end', values=(ip_address, port, 'Aucune CVE trouvée'))
 
-# Fonction pour effectuer un scan nmap lorsque le bouton est cliqué
-def scan_nmap():
-  # Récupérer l'adresse IP entrée par l'utilisateur
-  ip_address = ip_entry.get()
+# Fonction pour quitter le programme
+def quit_program():
+    root.destroy()
 
-  # Initialiser un scanneur de ports nmap
-  scanner = nmap.PortScanner()
+# Fonction pour relancer le programme
+def restart_program():
+    python = sys.executable
+    os.execl(python, python, *sys.argv)
 
-  # Effectuer un scan nmap avec l'option -sV pour obtenir des informations sur les ports ouverts et les services en>
-  scanner.scan(ip_address, arguments='-sV --script=vuln')
+# Fonction pour vérifier si une adresse IP est valide
+def is_valid_ip_address(ip_address):
+    parts = ip_address.split('.')
+    if len(parts) != 4:
+        return False
+    for part in parts:
+        if not part.isdigit():
+            return False
+        num = int(part)
+        if num < 0 or num > 255:
+            return False
+    return True
 
-  # Effacer les données des tableaux
-  scan_table.delete(*scan_table.get_children())
+# Créer une fenêtre Tkinter
+root = tk.Tk()
+root.title("Scanner de ports CVE")
 
-  # Afficher uniquement les ports ouverts avec leur nom et leur version dans le tableau Scan NMAP
-  for port in scanner[ip_address].all_tcp():
-    scan_table.insert('', 'end', values=(port, scanner[ip_address].tcp(port)['name'], scanner[ip_address].tcp(port)>))
-  for port in scanner[ip_address].all_udp():
-    scan_table.insert('', 'end', values=(port, scanner[ip_address].udp(port)['name'], scanner[ip_address].udp(port)>))
+# Créer une étiquette pour l'adresse IP
+ip_label = tk.Label(root, text="Adresse IP:")
+ip_label.grid(row=0, column=0)
 
-  # TODO: Récupérer les informations CVE pour chaque service en cours d'exécution sur l'hôte cible et les afficher >
+# Créer une zone de texte pour l'adresse IP
+ip_entry = tk.Entry(root)
+ip_entry.grid(row=0, column=1)
 
-# Créer un label pour demander à l'utilisateur d'entrer l'adresse IP à scanner
-ip_label = Label(root, text="Entrez l'adresse IP à scanner :")
-ip_label.pack()
+# Créer un bouton pour lancer le scan
+scan_button = tk.Button(root, text="Scanner", command=display_results)
+scan_button.grid(row=0, column=2)
 
-# Créer un champ de texte pour que l'utilisateur entre l'adresse IP
-ip_entry = Entry(root)
-ip_entry.pack()
+# Créer un tableau pour afficher les résultats
+columns = ('Adresse IP', 'Port', 'CVE')
+table = ttk.Treeview(root, columns=columns, show='headings')
+table.grid(row=1, column=0, columnspan=3)
+table.heading('Adresse IP', text='Adresse IP')
+table.heading('Port', text='Port')
+table.heading('CVE', text='CVE')
 
-# Créer un bouton pour démarrer le scan nmap lorsqu'il est cliqué
-scan_button = Button(root, text="Scanner avec nmap", command=scan_nmap)
-scan_button.pack()
+# Ajouter un bouton Quitter
+quit_button = tk.Button(root, text="Quitter", command=quit_program)
+quit_button.grid(row=2, column=0)
 
-# Créer un tableau pour afficher les résultats du scan nmap
-scan_table = ttk.Treeview(root, columns=('Port', 'Service', 'Version', 'CVE'), show='headings')
-scan_table.pack()
-scan_table.heading('Port', text="Port")
-scan_table.heading('Service', text="Service")
-scan_table.heading('Version', text="Version")
-scan_table.heading('CVE', text="CVE")
+# Ajouter un bouton pour relancer le programme
+restart_button = tk.Button(root, text="Relancer", command=restart_program)
+restart_button.grid(row=2, column=1)
 
-# Afficher la fenêtre principale
+# Lancer la boucle principale Tkinter
 root.mainloop()
