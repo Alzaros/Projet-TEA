@@ -5,7 +5,7 @@ import os
 
 # Fonction pour afficher le menu et demander à l'utilisateur de choisir une option
 def menu_toolbox():
-    os.system('clear')
+    os.system(clear)
     print(" ################################################")
     print("  _______ ____   ____  _      ____   ______   __")
     print(" |__   __/ __ \ / __ \| |    |  _ \ / __ \ \ / /")
@@ -15,6 +15,7 @@ def menu_toolbox():
     print("    |_|  \____/ \____/|______|____/ \____/_/ \_\ ")
     print("")
     print(" ################################################")
+    print("")
     print("Menu:")
     print("1. Dorks")
     print("2. WebFinder")
