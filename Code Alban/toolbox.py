@@ -1,15 +1,28 @@
 import sys
 import webbrowser
 import subprocess
+import os
 
 # Fonction pour afficher le menu et demander à l'utilisateur de choisir une option
 def menu_toolbox():
+    os.system('clear')
+    print(" ################################################")
+    print("  _______ ____   ____  _      ____   ______   __")
+    print(" |__   __/ __ \ / __ \| |    |  _ \ / __ \ \ / /")
+    print("    | | | |  | | |  | | |    | |_) | |  | \ V / ")
+    print("    | | | |  | | |  | | |    |  _ <| |  | |> <| ")
+    print("    | | | |__| | |__| | |____| |_) | |__| / . \ ")
+    print("    |_|  \____/ \____/|______|____/ \____/_/ \_\ ")
+    print("")
+    print(" ################################################")
     print("Menu:")
     print("1. Dorks")
     print("2. WebFinder")
     print("3. Scan NMAP")
     print("3. Scan NMAP CVE")
     print("4. Quitter")
+    print("")
+
     choix = input("Entrez le numéro de l'option que vous souhaitez choisir: ")
     return choix
 
@@ -100,6 +113,8 @@ def executer_script2():
         nikto_result = subprocess.run(nikto_command.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
         # Affichage du résultat de la commande Nikto
+        print("Recherche en cours...")
+        print("Cela peut prendre un certain temps ...")
         print(nikto_result.stdout.decode())
 
         # Demander à l'utilisateur s'il souhaite effectuer une recherche de répertoires avec Dirb
