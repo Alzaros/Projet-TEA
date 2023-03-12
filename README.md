@@ -48,6 +48,7 @@ python3 requirements.py install
 ## Le script
 Voici les explications de l'objectif de chaque sous parties de notre
 [https://www.youtube.com/watch?v=6XGj35f-row](https://youtu.be/6XGj35f-row)
+[https://github.com/Alzaros/Projet-TEA/blob/a460167ab552e39e376850c62d2ba6503c32c7f6/GIFs/Osint.gif]
 
  
  
