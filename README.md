@@ -57,7 +57,7 @@ Les recherches OSINT de notre script consiste à faire des recherches sur les li
 
 Pour cela nous utilisons l'outil HOLELE qui vérifie si un email est inscrit sur des sites comme Twitter, Instagram, Discord et plus de 120 autres sites
 
-# VIDEO
+VIDEO
 
 ### 2. DORKS
 #### - Qu'est-ce que DORKS ?
@@ -75,7 +75,7 @@ Les recherches dorks de notre script contient une fonction qui effectue une rech
 
 La fonction webbrowser est utilisée pour ouvrir les résultats de recherche dans un navigateur. Le menu principal est affiché en boucle jusqu'à ce que l'utilisateur choisisse de quitter.
  
- # VIDEO
+ VIDEO
  
 ### 3. WebFinder
 #### - Qu'est-ce que WebFinder ?
@@ -84,7 +84,7 @@ WebFinder est un outil de recherche d'informations sur le web pour collecter des
 #### - Nos Objectifs
 Les recherches webfinder permettent à l'utilisateur de scanner un site web avec Nikto et éventuellement avec Dirb en affichant un menu et en exécutant les commandes appropriées en fonction de son choix.
 
-# VIDEO
+VIDEO
 
 ### 4. Scan NMAP et Scan Réseau
 #### - Qu'est-ce qu'un scan NMAP et un scan réseau
@@ -95,3 +95,5 @@ Les recherches webfinder permettent à l'utilisateur de scanner un site web avec
 Pour cette partie, le script est une application graphique Python qui utilise les bibliothèques Nmap, Scapy, Requests, Tkinter, et PrettyTable pour effectuer des scans de port et de réseau. Il comporte deux onglets : "Scan NMAP" pour effectuer des scans de port avec Nmap, et "Scan Réseau" pour effectuer des scans ARP avec Scapy et obtenir des informations sur les adresses IP du réseau. 
  + La section "Scan NMAP" permet de spécifier une adresse IP, de sélectionner le mode de balayage (rapide ou complet), et d'afficher les résultats dans une table. 
  + La section "Scan Réseau" permet de spécifier une adresse IP, de lancer un scan ARP, et d'afficher les adresses IP et MAC correspondantes dans une table.
+ 
+ VIDEO
