@@ -56,12 +56,12 @@ python3 toolbox.py
 #### - Qu'est-ce que OSINT ?
 ```
 L'OSINT est une méthode de collecte d'informations à partir de sources ouvertes telles que les réseaux 
-sociaux et les sites web, utilisée pour obtenir des informations sur des personnes ou des événements.
+sociaux et les sites web, utilisés pour obtenir des informations sur des personnes ou des événements.
 ```
 #### - Nos Objectifs
-Les recherches OSINT de notre script consiste à faire des recherches sur les lieux d'enregistrement d'une adresse mail.
+Les recherches OSINT de notre script consistent à faire des recherches sur les lieux d'enregistrement d'une adresse mail.
 
-Pour cela nous utilisons l'outil HOLELE qui vérifie si un email est inscrit sur des sites comme Twitter, Instagram, Discord et plus de 120 autres sites
+Pour cela, nous utilisons l'outil Holehe qui vérifie si un email est inscrit sur des sites comme Twitter, Instagram, Discord et plus de 120 autres sites.
 
 ![](https://github.com/Alzaros/Projet-TEA/blob/main/GIFs/Osint.gif)
 
