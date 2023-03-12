@@ -18,17 +18,39 @@ def menu_toolbox():
     print(" ################################################")
     print("")
     print("Menu:")
-    print("1. Dorks")
-    print("2. WebFinder")
-    print("3. Scan NMAP")
-    print("4. Scan NMAP CVE")
-    print("5. Quitter")
+    print("1. OSINT")
+    print("2. Dorks")
+    print("3. WebFinder")
+    print("4. Scan NMAP")
+    print("5. Scan NMAP CVE")
+    print("6. Quitter")
     print("")
 
     choix = input("Entrez le numéro de l'option que vous souhaitez choisir: ")
     return choix
 
 ###################################### SCRIPT 1 - DORKS #########################
+
+def script_osint():
+    def script_osint_loop():
+        email_holehe = input("Entrez l'adresse e-mail à rechercher : ")
+        os.system(f"holehe {email_holehe}")
+
+    while True:
+        # Menu demandant à l'utilisateur de faire son choix
+        print("Choisissez une option:")
+        print("1. Commencer la recherche")
+        print("2. Revenir au menu précedent")
+        choice = input("Entrez votre choix (1-2): ")
+
+        if choice == "1":
+            script_osint_loop()
+            
+        elif choice == "2":
+            menu_toolbox()
+
+
+###################################### SCRIPT 2 - DORKS #########################
 
 def script_dorks():
 
@@ -108,7 +130,7 @@ def script_dorks():
             print("Choix invalide. Veuillez entrer un choix valide (1-9).")
 
 
-###################################### SCRIPT 2 - WebFinder #########################
+###################################### SCRIPT 3 - WebFinder #########################
 
 def script_webfinder():
         # Boucle principale pour le menu
@@ -163,28 +185,15 @@ def script_webfinder():
         elif choice == "2":
             menu_toolbox()
 
-###################################### SCRIPT 3 - NMAP #########################
+###################################### SCRIPT 4 - NMAP #########################
 
 def script_nmap():
     def script_nmap_loop():
         # On appelle le script tool_nmap.py
         import tool_nmap
         tool_nmap()
-    
-    while True:
-            # Menu demandant à l'utilisateur de faire son choix sur 
-            print("Choisissez une option:")
-            print("1. Commencer la recherche")
-            print("2. Revenir au menu précedent")
-            choice = input("Entrez votre choix (1-2): ")
 
-            if choice == "1":
-                script_nmap_loop()
-                
-            elif choice == "2":
-                menu_toolbox()
-
-###################################### SCRIPT - NMAP CVE #########################
+###################################### SCRIPT 5 - NMAP CVE #########################
 
 def script_nmapcve():
     print("Exécution du script 4")
@@ -194,14 +203,16 @@ def script_nmapcve():
 while True:
     choix = menu_toolbox()
     if choix == "1":
+        script_osint()
+    if choix == "2":
         script_dorks()
-    elif choix == "2":
-        script_webfinder()
     elif choix == "3":
-        script_nmap()
+        script_webfinder()
     elif choix == "4":
-        script_nmapcve()
+        script_nmap()
     elif choix == "5":
+        script_nmapcve()
+    elif choix == "6":
         sys.exit() # Quitter le programme
     else:
         print("Option invalide. Veuillez entrer un numéro entre 1 et 5.")
