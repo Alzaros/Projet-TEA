@@ -34,6 +34,9 @@ Ayant deux profils orienté réseau et débutant de développement nous avons ch
  
  ## 🛠️ Installation
  ### Téléchargement du fichier
-```git clone https://github.com/Alzaros/Projet-TEA.git```
+```git clone https://github.com/Alzaros/Projet-TEA.git
+cd Projet-TEA/
+python3 requirements.py install
+```
  
  
