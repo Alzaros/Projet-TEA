@@ -35,6 +35,10 @@ Ayant deux profils orienté réseau et débutant de développement nous avons ch
  ## 🛠️ Installation
  ### Téléchargement du fichier
 ```
+apt update && apt upgrade
+apt install python3
+```
+```
 git clone https://github.com/Alzaros/Projet-TEA.git
 cd Projet-TEA/
 python3 requirements.py install
