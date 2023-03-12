@@ -45,8 +45,7 @@ cd Projet-TEA/
 python3 requirements.py install
 ```
 
-## Le script
-Voici les explications de l'objectif de chaque sous parties de notre projet
+## Le développement de notre projet
 
 ### 1. OSINT 
 #### - Qu'est-ce que OSINT ?                                                                       
