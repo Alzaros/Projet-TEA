@@ -3,8 +3,16 @@ import sys
 import webbrowser
 import subprocess
 
+# Fonction qui nettoie le terminal
+def clear_terminal():
+    try:
+        os.system('cls' if os.name == 'nt' else 'clear')
+    except:
+        pass
+
 # Fonction pour afficher le menu et demander à l'utilisateur de choisir une option
 def menu_toolbox():
+    clear_terminal()
     print("")
     print("")
     print(" ################################################")
@@ -40,10 +48,10 @@ def script_osint():
         print("")
 
         # La commande à exécuter
-        command = f"holehe {email_holehe}"
+        holehe_command = f"holehe {email_holehe}"
 
         # Lancer la commande avec subprocess.Popen
-        process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
+        process = subprocess.Popen(holehe_command.split(), stdout=subprocess.PIPE)
 
         # Lire et afficher les sorties en temps réel
         while True:
@@ -157,7 +165,8 @@ def script_webfinder():
     def nikto():
         # Demander à l'utilisateur l'URL à scanner
         url = input("Entrez l'URL à scanner (ex : https://xxxxxxxx.fr) : ")
-
+        print("Recherche en cours...")
+        print("Cela peut prendre un certain temps ...")
         # Commande pour exécuter Nikto
         nikto_command = "nikto -h " + url
 
