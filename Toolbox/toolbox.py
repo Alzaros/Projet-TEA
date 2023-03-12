@@ -33,11 +33,26 @@ def menu_toolbox():
 
 def script_osint():
     def script_osint_loop():
+        # Demande à l'utilisateur l'email
         email_holehe = input("Entrez l'adresse e-mail à rechercher : ")
-        os.system(f"holehe {email_holehe}")
+
+        # La commande à exécuter
+        command = 'holehe {email_holehe}'
+
+        # Lancer la commande avec subprocess.Popen
+        process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
+
+        # Lire et afficher les sorties en temps réel
+        while True:
+            output = process.stdout.readline()
+            if output == b'' and process.poll() is not None:
+                break
+            if output:
+                print(output.strip().decode())
 
     while True:
         # Menu demandant à l'utilisateur de faire son choix
+        print("")
         print("Choisissez une option:")
         print("1. Commencer la recherche")
         print("2. Revenir au menu précedent")
@@ -62,6 +77,7 @@ def script_dorks():
     # Boucle principale pour le menu
     while True:
         # Menu demandant à l'utilisateur de faire son choix sur les recherches qu'il souahites
+        print("")
         print("Choisissez une option:")
         print("1. Rechercher des documents PDF sur un site spécifique")
         print("2. Rechercher des pages contenant des mots de passe")
@@ -173,7 +189,8 @@ def script_webfinder():
             dirb_process.wait()
 
     while True:
-        # Menu demandant à l'utilisateur de faire son choix sur 
+        # Menu demandant à l'utilisateur de faire son choix
+        print("")
         print("Choisissez une option:")
         print("1. Commencer la recherche")
         print("2. Revenir au menu précedent")
@@ -198,6 +215,8 @@ def script_nmap():
 def script_nmapcve():
     print("Exécution du script 4")
     # Ajoutez ici le code pour exécuter le script 3
+
+###################################### FIN DES SCRIPTS ############################
 
 # Boucle principale pour afficher le menu et exécuter les scripts
 while True:
