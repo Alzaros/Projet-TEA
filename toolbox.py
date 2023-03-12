@@ -161,17 +161,11 @@ def script_webfinder():
         # Commande pour exécuter Nikto
         nikto_command = f"nikto -h {url}"
 
-        print("Recherche en cours...")
-        print("Cela peut prendre un certain temps ...")
-
         # Exécution de la commande Nikto avec subprocess
         os.system(nikto_command) 
 
-        # Affichage du résultat de la commande Nikto
-        print("Recherche en cours...")
-        print("Cela peut prendre un certain temps ...")
-
         # Demander à l'utilisateur s'il souhaite effectuer une recherche de répertoires avec Dirb
+        print("")
         response = input("Voulez-vous effectuer une recherche plus poussée de répertoires avec Dirb ? (O/N)")
 
         # Si l'utilisateur répond "Oui" ou "o", exécuter Dirb
