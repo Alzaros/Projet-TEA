@@ -31,8 +31,7 @@ def menu_toolbox():
     print("2. Dorks")
     print("3. WebFinder")
     print("4. Scan NMAP")
-    print("5. Scan NMAP CVE")
-    print("6. Quitter")
+    print("5. Quitter")
     print("")
 
     choix = input("Entrez le numéro de l'option que vous souhaitez choisir: ")
@@ -54,6 +53,7 @@ def script_osint():
 
     while True:
         # Menu demandant à l'utilisateur de faire son choix
+        choice=""
         print("")
         print("Choisissez une option:")
         print("1. Commencer la recherche")
@@ -79,6 +79,7 @@ def script_dorks():
     # Boucle principale pour le menu
     while True:
         # Menu demandant à l'utilisateur de faire son choix sur les recherches qu'il souahites
+        choice=""
         print("")
         print("Choisissez une option:")
         print("1. Rechercher des documents PDF sur un site spécifique")
@@ -184,6 +185,7 @@ def script_webfinder():
 
     while True:
         # Menu demandant à l'utilisateur de faire son choix
+        choice=""
         print("")
         print("Choisissez une option:")
         print("1. Commencer la recherche")
@@ -203,12 +205,6 @@ def script_nmap():
     import tool_nmap
     tool_nmap()
 
-###################################### SCRIPT 5 - NMAP CVE #########################
-
-def script_nmapcve():
-    print("Exécution du script 4")
-    # Ajoutez ici le code pour exécuter le script 3
-
 ###################################### FIN DES SCRIPTS #############
 
 # Boucle principale pour afficher le menu et exécuter les scripts
@@ -223,8 +219,6 @@ while True:
     elif choix == "4":
         script_nmap()
     elif choix == "5":
-        script_nmapcve()
-    elif choix == "6":
         sys.exit() # Quitter le programme
     else:
         print("Option invalide. Veuillez entrer un numéro entre 1 et 5.")
