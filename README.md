@@ -28,4 +28,8 @@
 
                                                                                                                           
  # Présentation
-Ce projet à été réalisé par deux profils orienté réseau et débutant de développement, nous avons choisis de réaliser un script avec de nombreuses options mais sans les pousser à leur maximum dans le but de voir de nombreuse
+Ayant deux profils orienté réseau et débutant de développement nous avons choisis de réaliser un script avec de nombreuses options, recherches osint ; recherches dorks ; recherche webfinder ; scan nmap et scan réseau
+
+  •	Exécuter le script sur Kali
+ 
+ # 🛠️ Installation
