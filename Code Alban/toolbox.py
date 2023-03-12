@@ -2,11 +2,6 @@
 import sys
 import webbrowser
 import subprocess
-import nmap
-import tkinter as tk
-import scapy.all as scapy
-from tkinter import *
-from tkinter import ttk
 
 # Fonction pour afficher le menu et demander à l'utilisateur de choisir une option
 def menu_toolbox():
@@ -171,8 +166,11 @@ def script_webfinder():
 ###################################### SCRIPT 3 - NMAP #########################
 
 def script_nmap():
-    import tool_nmap
-    tool_nmap()
+    def script_nmap_loop():
+        # On appelle le script tool_nmap.py
+        import tool_nmap
+        tool_nmap()
+    
     while True:
             # Menu demandant à l'utilisateur de faire son choix sur 
             print("Choisissez une option:")
@@ -181,7 +179,7 @@ def script_nmap():
             choice = input("Entrez votre choix (1-2): ")
 
             if choice == "1":
-                script_nmap()
+                script_nmap_loop()
                 
             elif choice == "2":
                 menu_toolbox()

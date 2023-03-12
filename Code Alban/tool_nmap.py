@@ -6,9 +6,6 @@ from tkinter import *
 from tkinter import ttk
 from prettytable import PrettyTable
 
-# Variable globale pour stocker l'empreinte du système d'exploitation
-os_fingerprint = ''
-
 # Créer la fenêtre principale
 root = Tk()
 
