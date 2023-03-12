@@ -29,8 +29,8 @@ def menu_toolbox():
     print("1. Dorks")
     print("2. WebFinder")
     print("3. Scan NMAP")
-    print("3. Scan NMAP CVE")
-    print("4. Quitter")
+    print("4. Scan NMAP CVE")
+    print("5. Quitter")
     print("")
 
     choix = input("Entrez le numéro de l'option que vous souhaitez choisir: ")
@@ -38,7 +38,7 @@ def menu_toolbox():
 
 ###################################### SCRIPT 1 - DORKS #########################
 
-def executer_script1():
+def script_dorks():
 
     def google_dork(query):
         # Ouvrir les résultats de recherche dans un navigateur
@@ -47,7 +47,7 @@ def executer_script1():
 
     # Boucle principale pour le menu
     while True:
-        # Menu demandant à l'utilisateur de faire son choix sur 
+        # Menu demandant à l'utilisateur de faire son choix sur les recherches qu'il souahites
         print("Choisissez une option:")
         print("1. Rechercher des documents PDF sur un site spécifique")
         print("2. Rechercher des pages contenant des mots de passe")
@@ -60,46 +60,55 @@ def executer_script1():
         print("9. Revenir au menu précédent")
         choice = input("Entrez votre choix (1-9): ")
 
+        # Rechercher des documents PDF sur un site spécifique
         if choice == "1":
             keyword = input("Entrez le nom du site Web: ")
             query = f"site:{keyword} filetype:pdf"
             google_dork(query)
-            
+
+        # Rechercher des pages contenant des mots de passe
         elif choice == "2":
             keyword = input("Entrez un mot clé: ")
             query = f"intitle:\"Index of\" {keyword}"
             google_dork(query)
             
+        # Rechercher des pages vulnérables à l'injection SQL    
         elif choice == "3":
             keyword = input("Entrez un mot clé: ")
             query = f"inurl:\"id=\" AND \"SELECT\" {keyword}"
             google_dork(query)
             
+        # Rechercher des pages contenant des adresses e-mail Gmail d'une personne    
         elif choice == "4":
             keyword = input("Entrez le nom de la personne : ")
             query = f"\"{keyword}\" intext:'gmail.com'"
             google_dork(query)
-            
+
+        # Rechercher les réseaux sociaux d'une personne    
         elif choice == "5":
             keyword = input("Entrez le nom de la personne : ")
             query = f"\"{keyword}\" site:linkedin.com OR site:github.com OR site:facebook.com OR site:instagram.com OR site>"
             google_dork(query)
-            
+
+        # Rechercher des fichiers Excel contenant des mots de passe    
         elif choice == "6":
             keyword = input("Entrez un mot clé: ")
             query = f"intitle:\"Index of\" AND ext:xls {keyword}"
             google_dork(query)
-            
+
+        # Rechercher des pages contenant des vulnérabilités XSS    
         elif choice == "7":
             keyword = input("Entrez un mot clé: ")
             query = f"intitle:\"XSS\" OR intext:\"Cross Site Scripting\" {keyword}"
             google_dork(query)
-            
+
+        # Rechercher des pages contenant des vulnérabilités LFI    
         elif choice == "8":
             keyword = input("Entrez un mot clé: ")
             query = f"intitle:\"index of\" AND intext:\"../../\" {keyword}"
             google_dork(query)
-            
+
+        # Retour au menu toolbox 
         elif choice == "9":
             menu_toolbox()
             
@@ -109,7 +118,7 @@ def executer_script1():
 
 ###################################### SCRIPT 2 - WebFinder #########################
 
-def executer_script2():
+def script_webfinder():
         # Boucle principale pour le menu
 
     def nikto():
@@ -363,7 +372,7 @@ def script_nmap():# Variable globale pour stocker l'empreinte du système d'expl
 
 ###################################### SCRIPT - NMAP CVE #########################
 
-def nmapCVE():
+def script_nmapcve():
     print("Exécution du script 4")
     # Ajoutez ici le code pour exécuter le script 3
 
@@ -371,12 +380,14 @@ def nmapCVE():
 while True:
     choix = menu_toolbox()
     if choix == "1":
-        executer_script1()
+        script_dorks()
     elif choix == "2":
-        executer_script2()
+        script_webfinder()
     elif choix == "3":
-        executer_script3()
+        script_nmap()
     elif choix == "4":
+        script_nmapcve()
+    elif choix == "5":
         sys.exit() # Quitter le programme
     else:
-        print("Option invalide. Veuillez entrer un numéro entre 1 et 4.")
+        print("Option invalide. Veuillez entrer un numéro entre 1 et 5.")
