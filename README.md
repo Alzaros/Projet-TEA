@@ -33,7 +33,7 @@ Ayant deux profils orienté réseau et débutant de développement nous avons ch
   •	Exécuter le script sur Kali
  
  ## 🛠️ Installation
- ### Téléchargement paquets python3
+ ### ✔ Téléchargement paquets python3
 ```
 apt update && apt upgrade
 apt install python3
