@@ -33,11 +33,12 @@ Ayant deux profils orienté réseau et débutant de développement nous avons ch
   •	Exécuter le script sur Kali
  
  ## 🛠️ Installation
- ### Téléchargement du fichier
+ ### Téléchargement paquet python3
 ```
 apt update && apt upgrade
 apt install python3
 ```
+### Téléchargement du fichier Github
 ```
 git clone https://github.com/Alzaros/Projet-TEA.git
 cd Projet-TEA/
