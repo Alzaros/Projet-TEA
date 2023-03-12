@@ -34,19 +34,19 @@ Ayant deux profils orienté réseau et débutant de développement nous avons ch
  
  ## 🛠️ Installation
  ### ✔ Téléchargement paquets python3
-```
+```bash
 apt update && apt upgrade
 apt install python3
 ```
 ### ✔ Téléchargement du fichier Github
-```
+```bash
 git clone https://github.com/Alzaros/Projet-TEA.git
 cd Projet-TEA/
 python3 requirements.py install
 ```
 
 ### 🔞 Exécution du programme
-```
+```bash
 python3 toolbox.py
 ```
 
