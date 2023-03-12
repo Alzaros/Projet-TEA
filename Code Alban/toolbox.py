@@ -240,6 +240,18 @@ def script_nmap():# Variable globale pour stocker l'empreinte du système d'expl
         # Effectuer le scan nmap avec les options choisies
         scanner.scan(ip_address, arguments=scan_options)
 
+        #Créer une table pour afficher les résultats du scan NMAP
+        scan_table = ttk.Treeview(tab1, columns=("Ports", "Services", "Versions"))
+        scan_table.heading("#0", text="")
+        scan_table.heading("#1", text="Ports")
+        scan_table.heading("#2", text="Services")
+        scan_table.heading("#3", text="Versions")
+        scan_table.column("#0", width=10, anchor="center", stretch=True)
+        scan_table.column("#1", width=50, anchor="center", stretch=True)
+        scan_table.column("#2", width=150, anchor="center", stretch=True)
+        scan_table.column("#3", width=100, anchor="center", stretch=True)
+        scan_table.pack()
+
         # Effacer les données des tables
         scan_table.delete(*scan_table.get_children())
 
@@ -254,18 +266,6 @@ def script_nmap():# Variable globale pour stocker l'empreinte du système d'expl
         #Créer un bouton pour démarrer le scan NMAP
         nmap_button = ttk.Button(tab1, text="Lancer le scan", command=scan_nmap)
         nmap_button.pack()
-
-        #Créer une table pour afficher les résultats du scan NMAP
-        scan_table = ttk.Treeview(tab1, columns=("Ports", "Services", "Versions"))
-        scan_table.heading("#0", text="")
-        scan_table.heading("#1", text="Ports")
-        scan_table.heading("#2", text="Services")
-        scan_table.heading("#3", text="Versions")
-        scan_table.column("#0", width=10, anchor="center", stretch=True)
-        scan_table.column("#1", width=50, anchor="center", stretch=True)
-        scan_table.column("#2", width=150, anchor="center", stretch=True)
-        scan_table.column("#3", width=100, anchor="center", stretch=True)
-        scan_table.pack()
 
         # ------------------- Onglet 2 : Scan Réseau -------------------
 
