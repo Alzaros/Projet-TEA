@@ -48,7 +48,8 @@ python3 requirements.py install
 ## Le script
 Voici les explications de l'objectif de chaque sous parties de notre projet
 
-### :OSINT_BAGUETTE: 0SINT
+### ![image](https://user-images.githubusercontent.com/120183660/224549940-6f93e9bf-af75-4a49-b48b-737e6a33e21f.png)
+0SINT
 #### Qu'est-ce que OSINT ?
 L'OSINT est une méthode de collecte d'informations à partir de sources ouvertes telles que les réseaux sociaux et les sites web, utilisée pour obtenir des informations sur des personnes ou des événements.
 
