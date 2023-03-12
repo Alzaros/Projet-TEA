@@ -30,6 +30,6 @@
  # Présentation
 Ayant deux profils orienté réseau et débutant de développement nous avons choisis de réaliser un script avec de nombreuses options, recherches osint ; recherches dorks ; recherche webfinder ; scan nmap et scan réseau
 
-  •	Lancer sur Kali
+  •	Exécuter le script sur Kali
  
  # 🛠️ Installation
