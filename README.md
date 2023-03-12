@@ -73,13 +73,13 @@ sensibles ou cachées sur le web en utilisant des mots-clés spécifiques dans l
 ```
 #### - Nos Objectifs
 Les recherches dorks de notre script contient une fonction qui effectue une recherche Google en utilisant une requête spécifique en fonction du choix de l'utilisateur. Les choix incluent :
- + la recherche de fichiers PDF sur un site spécifique
- + la recherche de pages contenant des mots de passe
- + la recherche de pages vulnérables à l'injection SQL
- + la recherche de pages contenant des adresses e-mail Gmail précises
- + la recherche des réseaux sociaux d'une personne
- + la recherche de fichiers Excel contenant des mots de passe
- + la recherche de pages contenant des vulnérabilités XSS et de pages contenant des vulnérabilités LFI
+ + La recherche de fichiers PDF sur un site spécifique
+ + La recherche de pages contenant des mots de passe
+ + La recherche de pages vulnérables à l'injection SQL
+ + La recherche de pages contenant des adresses e-mail Gmail précises
+ + La recherche des réseaux sociaux d'une personne
+ + La recherche de fichiers Excel contenant des mots de passe
+ + La recherche de pages contenant des vulnérabilités XSS et de pages contenant des vulnérabilités LFI
 
 La fonction webbrowser est utilisée pour ouvrir les résultats de recherche dans un navigateur. Le menu principal est affiché en boucle jusqu'à ce que l'utilisateur choisisse de quitter.
  
