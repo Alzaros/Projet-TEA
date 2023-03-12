@@ -34,6 +34,10 @@ Ayant deux profils orienté réseau et débutant de développement nous avons ch
  
  ## 🛠️ Installation
  
-```azza```
+```
+git clone https://github.com/Alzaros/Projet-TAE.git
+cd Projet-TAE/
+python3 requirements.py install
+```
  
  
