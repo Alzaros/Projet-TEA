@@ -28,4 +28,4 @@
 
                                                                                                                           
  # Présentation
-Ayant deux profils orienté réseau et débutant de développement nous avons choisis de réaliser un script avec de nombreuses options mais sans les pousser à leur maximum dans le but de voir de nombreuse
+Ce projet à été réalisé par deux profils orienté réseau et débutant de développement, nous avons choisis de réaliser un script avec de nombreuses options mais sans les pousser à leur maximum dans le but de voir de nombreuse
