@@ -27,7 +27,7 @@
                                                                                                                   
 
                                                                                                                           
- ## Présentation
+ ## 📄 Présentation
 Ayant deux profils orienté réseau et débutant de développement nous avons choisis de réaliser un script avec de nombreuses options, recherches osint ; recherches dorks ; recherche webfinder ; scan nmap et scan réseau
 
   •	Exécuter le script sur Kali
@@ -38,14 +38,14 @@ Ayant deux profils orienté réseau et débutant de développement nous avons ch
 apt update && apt upgrade
 apt install python3
 ```
-### Téléchargement du fichier Github
+### ✔ Téléchargement du fichier Github
 ```
 git clone https://github.com/Alzaros/Projet-TEA.git
 cd Projet-TEA/
 python3 requirements.py install
 ```
 
-## Le développement de notre projet
+## 💻 Le développement de notre projet
 
 ### 1. OSINT 
 #### - Qu'est-ce que OSINT ?
