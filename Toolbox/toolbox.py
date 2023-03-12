@@ -2,6 +2,7 @@
 import sys
 import webbrowser
 import subprocess
+import os
 
 # Fonction qui nettoie le terminal
 def clear_terminal():
@@ -164,7 +165,7 @@ def script_webfinder():
         print("Cela peut prendre un certain temps ...")
 
         # Exécution de la commande Nikto avec subprocess
-        process = subprocess.Popen(nikto_command.split(), stdout=subprocess.PIPE)
+        os.system(nikto_command) 
 
         # Affichage du résultat de la commande Nikto
         print("Recherche en cours...")
@@ -179,7 +180,7 @@ def script_webfinder():
             dirb_command = f"dirb {url} /usr/share/wordlists/dirb/common.txt"
 
             # Exécution de la commande Dirb avec subprocess.Popen
-            dirb_process = subprocess.Popen(dirb_command.split(), stdout=subprocess.PIPE)
+            os.system(dirb_command)
 
     while True:
         # Menu demandant à l'utilisateur de faire son choix
