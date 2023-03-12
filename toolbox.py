@@ -66,7 +66,6 @@ def script_osint():
         elif choice == "2":
             menu_toolbox()
 
-
 ###################################### SCRIPT 2 - DORKS #########################
 
 def script_dorks():
