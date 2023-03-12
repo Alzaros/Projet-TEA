@@ -49,17 +49,7 @@ def script_osint():
 
         # La commande à exécuter
         holehe_command = f"holehe {email_holehe}"
-
-        # Lancer la commande avec subprocess.Popen
-        process = subprocess.Popen(holehe_command.split(), stdout=subprocess.PIPE)
-
-        # Lire et afficher les sorties en temps réel
-        while True:
-            output = process.stdout.readline()
-            if output == b'' and process.poll() is not None:
-                break
-            if output:
-                print(output.strip().decode())
+        os.system(holehe_command)   
 
     while True:
         # Menu demandant à l'utilisateur de faire son choix
@@ -189,18 +179,7 @@ def script_webfinder():
             dirb_command = f"dirb {url} /usr/share/wordlists/dirb/common.txt"
 
             # Exécution de la commande Dirb avec subprocess.Popen
-            dirb_process = subprocess.Popen(dirb_command.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-            # Affichage en temps réel de la sortie de Dirb
-            while True:
-                line = dirb_process.stdout.readline()
-                if not line:
-                    break
-                print(line.decode().rstrip())
-
-            # Fermeture du processus Dirb
-            dirb_process.terminate()
-            dirb_process.wait()
+            dirb_process = subprocess.Popen(dirb_command.split(), stdout=subprocess.PIPE)
 
     while True:
         # Menu demandant à l'utilisateur de faire son choix
