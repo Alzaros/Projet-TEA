@@ -1,8 +1,0 @@
-pip3 install holehe
-pip3 install nmap
-pip3 install python-nmap
-pip3 install outcome
-pip3 install requests
-pip3 install tk
-pip3 install scapy
-pip3 install prettytable
