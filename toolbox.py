@@ -37,7 +37,7 @@ def menu_toolbox():
     choix = input("Entrez le numéro de l'option que vous souhaitez choisir: ")
     return choix
 
-###################################### SCRIPT 1 - DORKS #########################
+###################################### SCRIPT 1 - OSINT #########################
 
 def script_osint():
     def script_osint_loop():
@@ -205,7 +205,7 @@ def script_nmap():
     import tool_nmap
     tool_nmap()
 
-###################################### FIN DES SCRIPTS #############
+###################################### FIN DES SCRIPTS #########################
 
 # Boucle principale pour afficher le menu et exécuter les scripts
 while True:
