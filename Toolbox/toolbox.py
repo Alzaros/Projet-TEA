@@ -174,7 +174,7 @@ def script_webfinder():
         print("Cela peut prendre un certain temps ...")
 
         # Exécution de la commande Nikto avec subprocess
-        process = subprocess.Popen(nikto_command.split(), process = subprocess.Popen()
+        process = subprocess.Popen(nikto_command.split(), stdout=subprocess.PIPE)
 
         # Affichage du résultat de la commande Nikto
         print("Recherche en cours...")
@@ -186,7 +186,7 @@ def script_webfinder():
         # Si l'utilisateur répond "Oui" ou "o", exécuter Dirb
         if response.lower() == "o":
             # Commande pour exécuter Dirb
-            dirb_command = "dirb " + url + " /usr/share/wordlists/dirb/common.txt"
+            dirb_command = "dirb {url} /usr/share/wordlists/dirb/common.txt"
 
             # Exécution de la commande Dirb avec subprocess.Popen
             dirb_process = subprocess.Popen(dirb_command.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
