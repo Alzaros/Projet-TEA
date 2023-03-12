@@ -28,7 +28,7 @@
 
                                                                                                                           
  ## 📄 Présentation
-Ayant deux profils orienté réseau et débutant de développement nous avons choisis de réaliser un script avec de nombreuses options, recherches osint ; recherches dorks ; recherche webfinder ; scan nmap et scan réseau
+Ce projet ayant été réalisé deux profils orientés réseau et débutant de développement, nous avons choisi de réaliser un script avec de nombreuses options, recherches osint ; recherches dorks ; recherche webfinder ; scan nmap et scan réseau
 
   •	Exécuter le script sur Kali
  
