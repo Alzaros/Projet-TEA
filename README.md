@@ -30,7 +30,7 @@
  ## 📄 Présentation
 Ce projet ayant été réalisé deux profils orientés réseau et débutant de développement, nous avons choisi de réaliser un script avec de nombreuses options, recherches osint ; recherches dorks ; recherche webfinder ; scan nmap et scan réseau
 
-  •	Exécuter le script sur Kali
+ ⚠️	Nous vous recommendons d'exécuter ce programme sur Linux Kali
  
  ## 🛠️ Installation
  ### ✔ Téléchargement paquets python3
