@@ -45,7 +45,7 @@ cd Projet-TEA/
 python3 requirements.py install
 ```
 
-### 📟 Execution du programme
+### 🔞 Execution du programme
 ```
 python3 toolbox.py
 ```
