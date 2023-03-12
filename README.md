@@ -47,7 +47,7 @@ python3 requirements.py install
 
 ## Le script
 Voici les explications de l'objectif de chaque sous parties de notre
-https://www.youtube.com/watch?v=6XGj35f-row
+[https://www.youtube.com/watch?v=6XGj35f-row](https://youtu.be/6XGj35f-row)
 
  
  
