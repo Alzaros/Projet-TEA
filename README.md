@@ -49,7 +49,7 @@ python3 requirements.py install
 
 ### 1. OSINT 
 #### - Qu'est-ce que OSINT ?
-```bash
+```
 L'OSINT est une méthode de collecte d'informations à partir de sources ouvertes telles que les réseaux 
 sociaux et les sites web, utilisée pour obtenir des informations sur des personnes ou des événements.
 ```
