@@ -52,7 +52,7 @@ Voici les explications de l'objectif de chaque sous parties de notre projet
 #### - Qu'est-ce que OSINT ?                                                                       
 L'OSINT est une méthode de collecte d'informations à partir de sources ouvertes telles que les réseaux sociaux et les sites web, utilisée pour obtenir des informations sur des personnes ou des événements.
 
-#### Nos Objectifs
+#### - Nos Objectifs
 Les recherches OSINT de notre script consiste à faire des recherches sur les lieux d'enregistrement d'une adresse mail.
 
 Pour cela nous utilisons le service HOLELE qui vérifie si un email est inscrit sur des sites comme Twitter, Instagram, Discord et plus de 120 autres sites
@@ -60,10 +60,10 @@ Pour cela nous utilisons le service HOLELE qui vérifie si un email est inscrit 
 VIDEO
 
 ### 2. DORKS
-#### Qu'est-ce que DORKS ?
+#### - Qu'est-ce que DORKS ?
 La recherche de dorks est une technique de recherche avancée utilisée pour trouver des informations sensibles ou cachées sur le web en utilisant des mots-clés spécifiques dans les moteurs de recherche.
 
-#### Nos objectifs
+#### - Nos objectifs
 Les recherches DORKS que nous avons choisis de développer dans notre script permettent de :
  + Rechercher des documents PDF sur un site spécifique.
  + Rechercher des pages contenant des mots de passe précis.
