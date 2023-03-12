@@ -33,7 +33,7 @@ Ayant deux profils orienté réseau et débutant de développement nous avons ch
   •	Exécuter le script sur Kali
  
  ## 🛠️ Installation
- ### Téléchargement paquet python3
+ ### Téléchargement paquets python3
 ```
 apt update && apt upgrade
 apt install python3
@@ -44,5 +44,10 @@ git clone https://github.com/Alzaros/Projet-TEA.git
 cd Projet-TEA/
 python3 requirements.py install
 ```
+
+## Le script
+Voici les explications de l'objectif de chaque sous parties de notre
+https://www.youtube.com/watch?v=6XGj35f-row
+
  
  
