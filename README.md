@@ -57,7 +57,7 @@ Les recherches OSINT de notre script consiste à faire des recherches sur les li
 
 Pour cela nous utilisons le service HOLELE qui vérifie si un email est inscrit sur des sites comme Twitter, Instagram, Discord et plus de 120 autres sites
 
-VIDEO
+![](https://github.com/Alzaros/Projet-TEA/blob/main/GIFs/Osint.gif)
 
 ### 2. DORKS
 #### - Qu'est-ce que DORKS ?
@@ -74,6 +74,6 @@ Les recherches DORKS que nous avons choisis de développer dans notre script per
  + Repérer des pages vulnérables à la vulnérabilité LFI.
  
  
-VIDEO
+![](https://github.com/Alzaros/Projet-TEA/blob/main/GIFs/Dorks.gif)
  
  
