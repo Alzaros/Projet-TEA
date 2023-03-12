@@ -83,9 +83,9 @@ La fonction webbrowser est utilisée pour ouvrir les résultats de recherche dan
 ### 3. WebFinder
 #### - Qu'est-ce que WebFinder ?
 ```
-WebFinder est un outil de recherche d'informations sur le web pour collecter des données à partir de sources 
-ouvertes. Il aide les professionnels de la sécurité à collecter des données sur les cibles potentielles, 
-les menaces ou les vulnérabilités sur le web.
+WebFinder est un outil de recherche d'informations sur le web pour collecter des données à partir de 
+sources ouvertes. Il aide les professionnels de la sécurité à collecter des données sur les cibles 
+potentielles, les menaces ou les vulnérabilités sur le web.
 ```
 #### - Nos Objectifs
 Les recherches webfinder permettent à l'utilisateur de scanner un site web avec Nikto et éventuellement avec Dirb en affichant un menu et en exécutant les commandes appropriées en fonction de son choix.
@@ -95,10 +95,10 @@ Les recherches webfinder permettent à l'utilisateur de scanner un site web avec
 ### 4. Scan NMAP et Scan Réseau
 #### - Qu'est-ce qu'un scan NMAP et un scan réseau
 ```
- + Un scan nmap est une technique de détection des ports ouverts et des services sur un hôte ou un réseau 
- à l'aide de l'outil de sécurité Nmap.
- + Un scan réseau est une méthode pour explorer les périphériques connectés à un réseau informatique afin 
- d'identifier les adresses IP, les noms d'hôtes et les ports ouverts.
+- Un scan nmap est une technique de détection des ports ouverts et des services sur un hôte ou un réseau 
+  à l'aide de l'outil de sécurité Nmap.
+- Un scan réseau est une méthode pour explorer les périphériques connectés à un réseau informatique afin 
+  d'identifier les adresses IP, les noms d'hôtes et les ports ouverts.
 ```
 #### - Nos Objectifs
 Pour cette partie, le script est une application graphique Python qui utilise les bibliothèques Nmap, Scapy, Requests, Tkinter, et PrettyTable pour effectuer des scans de port et de réseau. Il comporte deux onglets : "Scan NMAP" pour effectuer des scans de port avec Nmap, et "Scan Réseau" pour effectuer des scans ARP avec Scapy et obtenir des informations sur les adresses IP du réseau. 
