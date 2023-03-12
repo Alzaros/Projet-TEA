@@ -153,12 +153,13 @@ def executer_script2():
         elif choice == "2":
             menu_toolbox()
 
-# Fonction pour exécuter le script 3
+###################################### SCRIPT 3 - NMAP #########################
+
 def executer_script3():
     print("Exécution du script 3")
     # Ajoutez ici le code pour exécuter le script 3
 
-# Fonction pour exécuter le script 3
+# Fonction pour exécuter le script 4
 def executer_script4():
     print("Exécution du script 4")
     # Ajoutez ici le code pour exécuter le script 3
