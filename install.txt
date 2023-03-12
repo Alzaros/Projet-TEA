@@ -1,3 +1,4 @@
 pip3 install holehe
 pip3 install nmap
 pip3 install python-nmap
+pip3 install outcome

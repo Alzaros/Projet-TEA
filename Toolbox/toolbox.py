@@ -37,7 +37,7 @@ def script_osint():
         email_holehe = input("Entrez l'adresse e-mail à rechercher : ")
 
         # La commande à exécuter
-        command = 'holehe {email_holehe}'
+        command = f"holehe {email_holehe}"
 
         # Lancer la commande avec subprocess.Popen
         process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
@@ -216,7 +216,7 @@ def script_nmapcve():
     print("Exécution du script 4")
     # Ajoutez ici le code pour exécuter le script 3
 
-###################################### FIN DES SCRIPTS ############################
+###################################### FIN DES SCRIPTS #############
 
 # Boucle principale pour afficher le menu et exécuter les scripts
 while True:
