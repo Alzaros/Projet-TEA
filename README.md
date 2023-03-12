@@ -65,14 +65,15 @@ La recherche de dorks est une technique de recherche avancée utilisée pour tro
 
 #### Nos objectifs
 Les recherches DORKS que nous avons choisis de développer dans notre script permettent de :
-  • Rechercher des documents PDF sur un site spécifique.
-  • Rechercher des pages contenant des mots de passe précis.
-  • Rechercher des fichiers Excel contenant des mots de passe.
-  • Rechercher des pages web contenant des adresses e-mail Gmail précises.
-  • Identifier les réseaux sociaux d'une personne.
-  • Identifier des pages vulnérables à l'injection SQL et XSS.
-  • Repérer des pages vulnérables à la vulnérabilité LFI.
-
+ + Rechercher des documents PDF sur un site spécifique.
+ + Rechercher des pages contenant des mots de passe précis.
+ + Rechercher des fichiers Excel contenant des mots de passe.
+ + Rechercher des pages web contenant des adresses e-mail Gmail précises.
+ + Identifier les réseaux sociaux d'une personne.
+ + Identifier des pages vulnérables à l'injection SQL et XSS.
+ + Repérer des pages vulnérables à la vulnérabilité LFI.
+ 
+ 
 VIDEO
  
  
