@@ -177,7 +177,7 @@ def script_nmap():# Variable globale pour stocker l'empreinte du système d'expl
     
     def script_nmap_boucle():
 
-        # Créer la fenêtre principale
+                # Créer la fenêtre principale
         root = Tk()
 
         # Changer le titre de la fenêtre
@@ -195,11 +195,11 @@ def script_nmap():# Variable globale pour stocker l'empreinte du système d'expl
 
         # Afficher la barre de progression lorsque le scan commence
         def start_scan():
-            progress_bar.start()
+         progress_bar.start()
 
         # Arrêtez la barre de progression lorsque le balayage est terminé.
         def stop_scan():
-            progress_bar.stop()
+         progress_bar.stop()
 
         # ------------------- Onglet 1 : Scan NMAP -------------------
         # Créer une étiquette et un champ de saisie pour l'adresse IP
@@ -222,7 +222,7 @@ def script_nmap():# Variable globale pour stocker l'empreinte du système d'expl
         #Fonction permettant de lancer l'analyse NMAP
         #Effectuer un balayage NMAP lorsque le bouton est cliqué.
         def scan_nmap():
-            start_scan()
+         start_scan()
 
         # Obtenir l'adresse IP entrée par l'utilisateur
         ip_address = ip_entry.get()
@@ -303,7 +303,7 @@ def script_nmap():# Variable globale pour stocker l'empreinte du système d'expl
         # Fonction pour filtrer les résultats en fonction de l'état de la connexion
         def filter_results():
             filtered_results = []
-            for result in scan_result:
+            for result in stat_result:
                 if result[2] == state_filter.get():
                     filtered_results.append(result)
             show_results(filtered_results)
