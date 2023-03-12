@@ -34,7 +34,10 @@ def menu_toolbox():
 def script_osint():
     def script_osint_loop():
         # Demande à l'utilisateur l'email
+        print("")
         email_holehe = input("Entrez l'adresse e-mail à rechercher : ")
+        print("Recherche en cours ...")
+        print("")
 
         # La commande à exécuter
         command = f"holehe {email_holehe}"
@@ -205,10 +208,9 @@ def script_webfinder():
 ###################################### SCRIPT 4 - NMAP #########################
 
 def script_nmap():
-    def script_nmap_loop():
-        # On appelle le script tool_nmap.py
-        import tool_nmap
-        tool_nmap()
+    # On appelle le script tool_nmap.py
+    import tool_nmap
+    tool_nmap()
 
 ###################################### SCRIPT 5 - NMAP CVE #########################
 
