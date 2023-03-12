@@ -49,7 +49,7 @@ python3 requirements.py install
 Voici les explications de l'objectif de chaque sous parties de notre projet
 
 ### 1. 0SINT 
-#### Qu'est-ce que OSINT ?                                                                       
+#### - Qu'est-ce que OSINT ?                                                                       
 L'OSINT est une méthode de collecte d'informations à partir de sources ouvertes telles que les réseaux sociaux et les sites web, utilisée pour obtenir des informations sur des personnes ou des événements.
 
 #### Nos Objectifs
